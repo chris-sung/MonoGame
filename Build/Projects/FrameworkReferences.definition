@@ -79,6 +79,9 @@
     <Binary
       Name="SharpDX.XInput"
       Path="ThirdParty/Dependencies/SharpDX/Windows/SharpDX.XInput.dll" />
+	<Binary
+      Name="OpenTK"
+      Path="ThirdParty/Dependencies/OpenTK.dll" />
   </Platform>
 
   <Platform Type="Windows8">
@@ -103,6 +106,9 @@
     <Binary
       Name="SharpDX.XInput"
       Path="ThirdParty/Dependencies/SharpDX/Windows 8 Metro/SharpDX.XInput.dll" />
+	<Binary
+      Name="OpenTK"
+      Path="ThirdParty/Dependencies/OpenTK.dll" />
   </Platform>
 
   <Platform Type="WindowsGL">

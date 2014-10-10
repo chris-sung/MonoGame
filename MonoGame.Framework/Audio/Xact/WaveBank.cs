@@ -308,7 +308,7 @@ namespace Microsoft.Xna.Framework.Audio
                 if (codec == MiniFormatTag_PCM) {
                     
                     //write PCM data into a wav
-#if DIRECTX
+#if !OPENAL
                     
                     // TODO: Wouldn't storing a SoundEffectInstance like this
                     // result in the "parent" SoundEffect being garbage collected?
@@ -383,15 +383,15 @@ namespace Microsoft.Xna.Framework.Audio
                         throw new NotImplementedException();
                     }
                 } 
-                else if (codec == MiniFormatTag_ADPCM) 
-                {
-#if DIRECTX
+                else if (codec == MiniFormatTag_ADPCM)
+				{
+#if !OPENAL
                     _sounds[current_entry] = new SoundEffect(audiodata, rate, (AudioChannels)chans)
                     {
                         _format = new SharpDX.Multimedia.WaveFormatAdpcm(rate, chans, align)
                     };
 #else
-                    using (var dataStream = new MemoryStream(audiodata)) {
+					using (var dataStream = new MemoryStream(audiodata)) {
                         using (var source = new BinaryReader(dataStream)) {
                             _sounds[current_entry] = new SoundEffect(
                                 MSADPCMToPCM.MSADPCM_TO_PCM(source, (short) chans, (short) align),
