@@ -74,9 +74,6 @@
       Name="SharpDX.RawInput"
       Path="ThirdParty/Dependencies/SharpDX/Windows/SharpDX.RawInput.dll" />
     <Binary
-      Name="SharpDX.XAudio2"
-      Path="ThirdParty/Dependencies/SharpDX/Windows/SharpDX.XAudio2.dll" />
-    <Binary
       Name="SharpDX.XInput"
       Path="ThirdParty/Dependencies/SharpDX/Windows/SharpDX.XInput.dll" />
 	<Binary
@@ -100,9 +97,6 @@
     <Binary
       Name="SharpDX.MediaFoundation"
       Path="ThirdParty/Dependencies/SharpDX/Windows 8 Metro/SharpDX.MediaFoundation.dll" />
-    <Binary
-      Name="SharpDX.XAudio2"
-      Path="ThirdParty/Dependencies/SharpDX/Windows 8 Metro/SharpDX.XAudio2.dll" />
     <Binary
       Name="SharpDX.XInput"
       Path="ThirdParty/Dependencies/SharpDX/Windows 8 Metro/SharpDX.XInput.dll" />

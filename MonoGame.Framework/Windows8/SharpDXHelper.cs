@@ -124,6 +124,7 @@ namespace Microsoft.Xna.Framework
             return new SharpDX.Vector4(vec.X, vec.Y, vec.Z, vec.W);
         }
 
+#if !OPENAL
         static public SharpDX.X3DAudio.Emitter ToEmitter(this Audio.AudioEmitter emitter)
         {           
             // Pulling out Vector properties for efficiency.
@@ -196,5 +197,6 @@ namespace Microsoft.Xna.Framework
                 OrientTop = new SharpDX.Vector3(up.X, up.Y, up.Z),                
             };
         }
+#endif
     }
 }
